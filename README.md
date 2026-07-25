@@ -79,19 +79,19 @@ Verify:
 docker --version
 docker compose version
 git --version
+```
 
+# Start the Application
 
-##Start the Application
-
-Clone repository:
+## Clone repository:
 
 git clone https://github.com/vindhyashre/cloud-incident-response-lab.git
 
-Move into project:
+## Move into project:
 
 cd cloud-incident-response-lab
 
-Start containers:
+## Start containers:
 
 docker compose up --build
 Access Services
@@ -100,9 +100,10 @@ Application	http://localhost
 Prometheus	http://localhost:9090
 Grafana	http://localhost:3000
 Node Exporter	http://localhost:9100
-📊 Monitoring Dashboard
 
-Grafana monitors:
+# 📊 Monitoring Dashboard
+
+## Grafana monitors:
 
 Application Metrics
 HTTP request count
@@ -113,64 +114,66 @@ CPU usage
 Memory usage
 Disk usage
 Network statistics
-🚨 Alerting
 
-Prometheus alert rules detect:
+# 🚨 Alerting
+
+## Prometheus alert rules detect:
 
 Application Down
 
-Condition:
+## Condition:
 
 up{job="application"} == 0
 
-Action:
+## Action:
 
 Alert triggered
 Engineer investigates
 Service recovery performed
 High CPU Usage
 
-Condition:
+## Condition:
 
 CPU usage > 80%
 
-🧪 Incident Simulation
+# 🧪 Incident Simulation
 Simulate Application Failure
 
-Stop application:
+## Stop application:
 
 docker stop flask-app
 
-Check alert:
+## Check alert:
 
 Prometheus → Alerts
 
-Recover:
+## Recover:
 
 docker start flask-app
 
-Verify health:
+## Verify health:
 
 .\scripts\check_health.ps1
 
-#🔧 Troubleshooting Commands
+# 🔧 Troubleshooting Commands
 
-Check containers:
+## Check containers:
 
 docker ps
 
-View logs:
+## View logs:
 
 docker logs flask-app
 
-Check resource usage:
+## Check resource usage:
 
 docker stats
 
-Restart services:
+## Restart services:
 
 docker compose restart
-📁 Project Structure
+
+# 📁 Project Structure
 cloud-incident-response-lab
 
 ├── app
@@ -199,7 +202,8 @@ cloud-incident-response-lab
 │
 ├── Dockerfile
 └── docker-compose.yml
-🎯 Skills Demonstrated
+
+# 🎯 Skills Demonstrated
 Cloud infrastructure monitoring
 Linux/container troubleshooting
 Docker operations
@@ -209,21 +213,22 @@ Incident response workflow
 Alert configuration
 CI/CD automation
 Production troubleshooting practices
-👩‍💻 Author
+
+# 👩‍💻 Author
 
 Vindhya Shree
 
 Cloud Support Engineer Portfolio Project
 
-
 Save the file.
 
-Then commit it:
+## Then commit it:
 
 ```powershell
 git add README.md
 git commit -m "Add professional project README"
+```
 
-Push:
+## Push:
 
 git push
