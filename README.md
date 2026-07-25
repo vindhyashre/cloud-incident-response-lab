@@ -84,36 +84,37 @@ git --version
 # Start the Application
 
 ## Clone repository:
-
+```bash
 git clone https://github.com/vindhyashre/cloud-incident-response-lab.git
-
+```
 ## Move into project:
-
+```bash
 cd cloud-incident-response-lab
-
+```
 ## Start containers:
-
-docker compose up --build
-Access Services
-Service	URL
-Application	http://localhost
-Prometheus	http://localhost:9090
-Grafana	http://localhost:3000
-Node Exporter	http://localhost:9100
+```bash
+-docker compose up --build
+```
+-Access Services
+-Service	URL
+-Application	http://localhost
+-Prometheus	http://localhost:9090
+-Grafana	http://localhost:3000
+-Node Exporter	http://localhost:9100
 
 # 📊 Monitoring Dashboard
 
 ## Grafana monitors:
 
-Application Metrics
-HTTP request count
-Error rate
-Application availability
-Infrastructure Metrics
-CPU usage
-Memory usage
-Disk usage
-Network statistics
+-Application Metrics
+-HTTP request count
+-Error rate
+-Application availability
+-Infrastructure Metrics
+-CPU usage
+-Memory usage
+-Disk usage
+-Network statistics
 
 # 🚨 Alerting
 
@@ -127,10 +128,10 @@ up{job="application"} == 0
 
 ## Action:
 
-Alert triggered
-Engineer investigates
-Service recovery performed
-High CPU Usage
+-Alert triggered
+-Engineer investigates
+-Service recovery performed
+-High CPU Usage
 
 ## Condition:
 
@@ -148,31 +149,31 @@ docker stop flask-app
 Prometheus → Alerts
 
 ## Recover:
-
+```bash
 docker start flask-app
-
+```
 ## Verify health:
-
+```bash
 .\scripts\check_health.ps1
-
+```
 # 🔧 Troubleshooting Commands
 
 ## Check containers:
-
+```bash
 docker ps
-
+```
 ## View logs:
-
+```bash
 docker logs flask-app
-
+```
 ## Check resource usage:
-
+```bash
 docker stats
-
+```
 ## Restart services:
-
+```bash
 docker compose restart
-
+```
 # 📁 Project Structure
 cloud-incident-response-lab
 
@@ -204,15 +205,15 @@ cloud-incident-response-lab
 └── docker-compose.yml
 
 # 🎯 Skills Demonstrated
-Cloud infrastructure monitoring
-Linux/container troubleshooting
-Docker operations
-Prometheus metrics
-Grafana visualization
-Incident response workflow
-Alert configuration
-CI/CD automation
-Production troubleshooting practices
+-Cloud infrastructure monitoring
+-Linux/container troubleshooting
+-Docker operations
+-Prometheus metrics
+-Grafana visualization
+-Incident response workflow
+-Alert configuration
+-CI/CD automation
+-Production troubleshooting practices
 
 # 👩‍💻 Author
 
